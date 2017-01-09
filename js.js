@@ -28,7 +28,7 @@ function crearHTML(chat){
     document.getElementById("a").innerHTML = "";
     jQuery('#a').empty();
     for(var x = 0; x<chat.length;x++){
-        div.innerHTML += "<div style='padding-top: px; padding-bottom:4px; background-color : "+ ((x%2 == 0)? color1 : color2) +";'>"+ nombres[x] + ": " + chat[x] + "</div>";
+        div.innerHTML += "<div style='padding-top: px; padding-bottom:4px; background-color : "+ ((x%2 == 0)? color1 : color2) +";'>"+ nombres[x] + ": " + chat[x] + "<div style='font-size:0.8em;width:100%; text-align: right'>Enviado"+ fechas[x]+ "</div>" + "</div>";
     }
     div.scrollTop = div.scrollHeight - div.clientHeight;
 }
@@ -46,10 +46,13 @@ function peticionHTML(numero){
                 temp.innerHTML = this.responseText;
                 var lista = temp.getElementsByClassName("entry-content");
                 var listaNombres = temp.getElementsByClassName("username");
+                var listaFechas = temp.getElementsByClassName("posthead");
+                
                 if(!(temp.getElementsByClassName("message").length > 0)){
                     for (var x = 0; x<lista.length;x++){
                         if(lista[x].getElementsByTagName("script").length>0) continue;
                         chat.push(jQuery(lista[x].getElementsByTagName("div")[0].innerHTML).text());
+                        fechas.push(jQuery(listaFechas[x].innerHTML).clone().children().remove().end().text()); // magiaaa
                         var usuario = jQuery(listaNombres[x].innerHTML).text();
                         if(usuario == "") usuario = "Invitado";
                         nombres.push(usuario);
@@ -64,6 +67,8 @@ function peticionHTML(numero){
             }
             else{
                 
+                console.log("Fin busqueda de mensajes");
+                crearHTML(chat);
 
             }
         }
