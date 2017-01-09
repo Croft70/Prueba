@@ -28,7 +28,7 @@ function crearHTML(chat){
     document.getElementById("a").innerHTML = "";
     jQuery('#a').empty();
     for(var x = 0; x<chat.length;x++){
-        div.innerHTML += "<div style='padding-top: px; padding-bottom:4px; background-color : "+ ((x%2 == 0)? color1 : color2) +";'>"+ nombres[x] + ": " + chat[x] + "<div style='font-size:0.8em;width:100%; text-align: right'>Enviado"+ fechas[x]+ "</div>" + "</div>";
+        div.innerHTML += "<div style='padding-top:0px; padding-bottom:0px; background-color : "+ ((x%2 == 0)? color1 : color2) +";'>"+ nombres[x] + ": " + chat[x] + "<div style='font-size:0.8em;width:100%; text-align: right'>Enviado"+ fechas[x]+ "</div>" + "</div>";
     }
     div.scrollTop = div.scrollHeight - div.clientHeight;
 }
