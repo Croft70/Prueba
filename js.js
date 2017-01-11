@@ -122,11 +122,14 @@ function crearHTML(chat){
     var div = document.getElementById("a");
     document.getElementById("a").innerHTML = "";
     jQuery('#a').empty();
-    for(var x = 0; x<chat.length;x++){
-        //if(x==20) break;
+    var contadorPorqueSacarCuentasEsDificil=0;
+    for(var x = chat.length-1; x>=0;x--){
+        if(contadorPorqueSacarCuentasEsDificil==21) break;
         div.innerHTML += "<div style='padding-top:0px; padding-bottom:0px; background-color : "+ ((x%2 == 0)? color1 : color2) +";'>"+ nombres[x] + ": " + chat[x] + "<div style='line-height: 70%;padding-bottom:0px;font-size:0.8em;width:100%; text-align: right'>Enviado"+ fechas[x]+ "</div>" + "</div>";
+        contadorPorqueSacarCuentasEsDificil++;
     }
     div.scrollTop = div.scrollHeight - div.clientHeight;
+    
 }
 
 function peticionHTML(numero){
