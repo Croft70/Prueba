@@ -14,8 +14,17 @@ function enviar(event){
         document.getElementById("texto").value = "";
     }
 }
-            
 function actualizar(){
+  
+    if(actualizar==1){
+        actualizar1();
+        actualizar = 0;
+    }
+    
+       
+    
+}            
+function actualizar1(){
     chat.length = 0;
     nombres.length = 0;
     peticionHTML(0);
