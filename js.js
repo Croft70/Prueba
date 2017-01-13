@@ -12,11 +12,16 @@ function enviar(event){
         scriptTag +=  "/script>";
         jQuery("#b").contents().find("body").append(scriptTag);
         document.getElementById("texto").value = "";
-        actualizar = 1;
+        actualizarChat = 1;
     }
 }
-        
 function actualizar(){
+    if(actualizarChat==1){
+        actualizar1();
+        actualizarChat=0;
+    }
+}       
+function actualizar1(){
     chat.length = 0;
     nombres.length = 0;
     peticionHTML(0);
