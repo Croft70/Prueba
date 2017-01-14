@@ -26,7 +26,7 @@ function enviar(event){
 }
 function actualizar(){
     if(actualizarChat==1){
-        actualizar2();
+        actualizar1();
         actualizarChat=0;
     }
     if(document.getElementById("b").src == "http://gwrol.nforum.biz/t31-tagboard-ignorar"){
