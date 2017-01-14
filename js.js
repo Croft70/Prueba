@@ -12,6 +12,7 @@ function enviar(event){
         scriptTag +=  "/script>";
         jQuery("#b").contents().find("body").append(scriptTag);
         document.getElementById("texto").value = "";
+        document.getElementById("texto").style.backgroundColor = "#ffcccc";
         actualizarChat = 1;
     }
     else{
