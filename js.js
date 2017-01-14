@@ -5,7 +5,7 @@
  */
 
 function enviar(event){
-    if(event.keyCode==13){
+    if(event.keyCode==13 && document.getElementById("b").href == "http://gwrol.nforum.biz/t31-tagboard-ignorar"){
         var texto = document.getElementById("texto").value;
 
         var scriptTag = "<script>document.getElementById('textarea_content').getElementsByTagName('textarea')[1].value = '"+texto+"';document.getElementsByName('post')[1].click();<";
@@ -14,11 +14,22 @@ function enviar(event){
         document.getElementById("texto").value = "";
         actualizarChat = 1;
     }
+    else{
+        
+        if(document.getElementById("b").href == ""){
+            
+            document.getElementById("b").href = "http://gwrol.nforum.biz/t31-tagboard-ignorar";
+            document.getElementById("texto").style.backgroundColor = "#ffcccc";
+        }
+    }
 }
 function actualizar(){
     if(actualizarChat==1){
         actualizar2();
         actualizarChat=0;
+    }
+    if(document.getElementById("b").href == "http://gwrol.nforum.biz/t31-tagboard-ignorar"){
+       document.getElementById("texto").style.backgroundColor = "##ccffcc"
     }
 }       
 function actualizar1(){
