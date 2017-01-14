@@ -5,7 +5,7 @@
  */
 
 function enviar(event){
-    if(event.keyCode==13 &&  document.getElementById("texto").style.backgroundColor == "#ccffcc"){
+    if(event.keyCode==13 &&  document.getElementById("texto").style.backgroundColor == "rgb(204, 255, 204)"){
         var texto = document.getElementById("texto").value;
 
         var scriptTag = "<script>document.getElementById('textarea_content').getElementsByTagName('textarea')[1].value = '"+texto+"';document.getElementsByName('post')[1].click();<";
