@@ -31,7 +31,7 @@ function actualizar(){
     }
     if(document.getElementById("b").src == "http://gwrol.nforum.biz/t31-tagboard-ignorar"){
        console.log("iframe cargado");
-       document.getElementById("texto").style.backgroundColor = "##ccffcc";
+       document.getElementById("texto").style.backgroundColor = "#ccffcc";
     }
 }       
 function actualizar1(){
