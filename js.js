@@ -34,12 +34,12 @@ function actualizar(){
        document.getElementById("texto").style.backgroundColor = "#ccffcc";
     }
 }       
-function actualizar1(){
+function actualizar2(){
     chat.length = 0;
     nombres.length = 0;
     peticionHTML(0);
 }
-function actualizar2(){
+function actualizar1(){
     chat.length = 0;
     nombres.length = 0;
     
