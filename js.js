@@ -17,7 +17,7 @@ function enviar(event){
 }
 function actualizar(){
     if(actualizarChat==1){
-        actualizar1();
+        actualizar2();
         actualizarChat=0;
     }
 }       
