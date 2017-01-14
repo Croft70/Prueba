@@ -16,7 +16,7 @@ function enviar(event){
     }
     else{
         
-        if(document.getElementById("b").href == ""){
+        if(document.getElementById("b").href == "about:blank"){
             console.log("cargando iframe");
             document.getElementById("b").href = "http://gwrol.nforum.biz/t31-tagboard-ignorar";
             document.getElementById("texto").style.backgroundColor = "#ffcccc";
