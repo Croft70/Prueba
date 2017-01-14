@@ -29,6 +29,7 @@ function actualizar(){
         actualizarChat=0;
     }
     if(document.getElementById("b").src == "http://gwrol.nforum.biz/t31-tagboard-ignorar"){
+       console.log("iframe cargado");
        document.getElementById("texto").style.backgroundColor = "##ccffcc"
     }
 }       
