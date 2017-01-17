@@ -46,7 +46,7 @@ function actualizar1(){
     var ultimosMensajes = document.getElementsByClassName("last-post-icon");
     var direccionUltimaPagina = ultimosMensajes[ultimosMensajes.length-1].getAttribute("href");
     direccionUltimaPagina = direccionUltimaPagina.substr(1);
-    var numeroUltimaPagina = direccionUltimaPagina.substr(4,2);
+    var numeroUltimaPagina = direccionUltimaPagina.split("-")[0];
     console.log("cantidad de temas: " + ultimosMensajes.length);
     console.log(direccionUltimaPagina);
     console.log(numeroUltimaPagina);
