@@ -174,10 +174,11 @@ function peticionHTML(numero){
                         if(lista[x].getElementsByTagName("script").length>0) continue;
                         chat.push(jQuery(lista[x].getElementsByTagName("div")[0].innerHTML).text());
                         fechas.push(jQuery(listaFechas[x].innerHTML).clone().children().remove().end().text()); // magiaaa
-                        var usuario = jQuery(listaNombres[x].innerHTML).text();
                         console.log("good 1");
-                        if(usuario == "") usuario = "Invitado";
+                        var usuario = jQuery(listaNombres[x].innerHTML).text();
                         console.log("good 2");
+                        if(usuario == "") usuario = "Invitado";
+                        
                         nombres.push(usuario);
                     }
                     console.log("Encontre algo status: " + request.status);
