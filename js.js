@@ -71,6 +71,7 @@ function actualizar1(){
                 var listaFechas = temp.getElementsByClassName("posthead");
                 
                 var url = jQuery(temp.getElementsByClassName("main-head clearfix")[0].innerHTML).text();
+                console.log(url);
                 url = url.split(" ")[2];
                 numeroUltimaPagina = 25*(url-1);
                 console.log(numeroUltimaPagina);
