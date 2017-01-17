@@ -68,7 +68,7 @@ function actualizar1(){
                         fechas.push(jQuery(listaFechas[x].innerHTML).clone().children().remove().end().text());
                         chat.push(jQuery(lista[x].getElementsByTagName("div")[0].innerHTML).text());
                         var usuario = jQuery(listaNombres[x].innerHTML).text();
-                        if(usuario == "") usuario = "Invitado";
+                        if(usuario.equals("")) usuario = "Invitado";
                         nombres.push(usuario);
                     }
                     console.log("Encontre algo status: " + peticion1.status);
