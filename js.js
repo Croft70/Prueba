@@ -70,7 +70,7 @@ function actualizar1(){
                         var query = listaNombres[x].innerHTML.replace(/(?=[()])/g, '\\');
                         var usuario = jQuery(query).text();
                         
-                        if(usuario.equals("")) usuario = "Invitado";
+                        if(usuario == "") usuario = "Invitado";
                         
                         nombres.push(usuario);
                     }
