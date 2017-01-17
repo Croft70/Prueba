@@ -68,9 +68,9 @@ function actualizar1(){
                         fechas.push(jQuery(listaFechas[x].innerHTML).clone().children().remove().end().text());
                         chat.push(jQuery(lista[x].getElementsByTagName("div")[0].innerHTML).text());
                         var usuario = jQuery(listaNombres[x].innerHTML).text();
-                        console.log("good 1");
+                        
                         if(usuario.equals("")) usuario = "Invitado";
-                        console.log("good 1");
+                        
                         nombres.push(usuario);
                     }
                     console.log("Encontre algo status: " + peticion1.status);
@@ -175,7 +175,9 @@ function peticionHTML(numero){
                         chat.push(jQuery(lista[x].getElementsByTagName("div")[0].innerHTML).text());
                         fechas.push(jQuery(listaFechas[x].innerHTML).clone().children().remove().end().text()); // magiaaa
                         var usuario = jQuery(listaNombres[x].innerHTML).text();
+                        console.log("good 1");
                         if(usuario == "") usuario = "Invitado";
+                        console.log("good 2");
                         nombres.push(usuario);
                     }
                     console.log("Encontre algo status: " + request.status);
