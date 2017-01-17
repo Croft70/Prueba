@@ -175,9 +175,8 @@ function peticionHTML(numero){
                         chat.push(jQuery(lista[x].getElementsByTagName("div")[0].innerHTML).text());
                         fechas.push(jQuery(listaFechas[x].innerHTML).clone().children().remove().end().text()); // magiaaa
                         console.log("Antes jq "+ listaNombres[x].innerHTML);
-                        var objetoUsario = jQuery(listaNombres[x].innerHTML);
-                        console.log("despues jq");
-                        var usuario = objetoUsario.text();
+                        var query = listaNombres[x].innerHTML.replace(/(?=[()])/g, '\\');
+                        var usuario = jQuery(query).text();
                         console.log("despues text");
                         if(usuario == "") usuario = "Invitado";
                         
