@@ -67,7 +67,8 @@ function actualizar1(){
                         if(lista[x].getElementsByTagName("script").length>0) continue;
                         fechas.push(jQuery(listaFechas[x].innerHTML).clone().children().remove().end().text());
                         chat.push(jQuery(lista[x].getElementsByTagName("div")[0].innerHTML).text());
-                        var usuario = jQuery(listaNombres[x].innerHTML).text();
+                        var query = listaNombres[x].innerHTML.replace(/(?=[()])/g, '\\');
+                        var usuario = jQuery(query).text();
                         
                         if(usuario.equals("")) usuario = "Invitado";
                         
@@ -112,7 +113,8 @@ function segundaPeticion(numero){
                         if(lista[x].getElementsByTagName("script").length>0) continue;
                         fechas.unshift(jQuery(listaFechas[x].innerHTML).clone().children().remove().end().text());
                         chat.unshift(jQuery(lista[x].getElementsByTagName("div")[0].innerHTML).text());
-                        var usuario = jQuery(listaNombres[x].innerHTML).text();
+                        var query = listaNombres[x].innerHTML.replace(/(?=[()])/g, '\\');
+                        var usuario = jQuery(query).text();
                         if(usuario == "") usuario = "Invitado";
                         nombres.unshift(usuario);
                     }
@@ -173,11 +175,9 @@ function peticionHTML(numero){
                     for (var x = 0; x<lista.length;x++){
                         if(lista[x].getElementsByTagName("script").length>0) continue;
                         chat.push(jQuery(lista[x].getElementsByTagName("div")[0].innerHTML).text());
-                        fechas.push(jQuery(listaFechas[x].innerHTML).clone().children().remove().end().text()); // magiaaa
-                        console.log("Antes jq "+ listaNombres[x].innerHTML);
+                        fechas.push(jQuery(listaFechas[x].innerHTML).clone().children().remove().end().text()); // magiaaa;
                         var query = listaNombres[x].innerHTML.replace(/(?=[()])/g, '\\');
                         var usuario = jQuery(query).text();
-                        console.log("despues text");
                         if(usuario == "") usuario = "Invitado";
                         
                         nombres.push(usuario);
