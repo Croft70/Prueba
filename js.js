@@ -67,7 +67,7 @@ function actualizar1(){
                         if(lista[x].getElementsByTagName("script").length>0) continue;
                         fechas.push(jQuery(listaFechas[x].innerHTML).clone().children().remove().end().text());
                         chat.push(jQuery(lista[x].getElementsByTagName("div")[0].innerHTML).text());
-                        var query = listaNombres[x].innerHTML.replace(/(?=[({})])/g, '\\');
+                        var query = listaNombres[x].innerHTML.replace(/(?=[({'";<>})])/g, '\\');
                         var usuario = jQuery(query).text();
                         
                         if(usuario == "") usuario = "Invitado";
