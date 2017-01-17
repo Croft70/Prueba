@@ -174,7 +174,7 @@ function peticionHTML(numero){
                         if(lista[x].getElementsByTagName("script").length>0) continue;
                         chat.push(jQuery(lista[x].getElementsByTagName("div")[0].innerHTML).text());
                         fechas.push(jQuery(listaFechas[x].innerHTML).clone().children().remove().end().text()); // magiaaa
-                        console.log("Antes jq");
+                        console.log("Antes jq "+ listaNombres[x].innerHTML);
                         var objetoUsario = jQuery(listaNombres[x].innerHTML);
                         console.log("despues jq");
                         var usuario = objetoUsario.text();
