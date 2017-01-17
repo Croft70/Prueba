@@ -48,12 +48,12 @@ function actualizar1(){
     var ultimosMensajes = ultimosMensajesTcr[ultimosMensajesTcr.length-1].getElementsByTagName("span")[0].getElementsByTagName("a")[ultimosMensajesTcr[ultimosMensajesTcr.length-1].getElementsByTagName("span")[0].getElementsByTagName("a").length-1];
     //var direccionUltimaPagina = ultimosMensajes[ultimosMensajes.length-1].getAttribute("href");
     var direccionUltimaPagina = ultimosMensajes.getAttribute("href");
-    console.log(ultimosMensajesTcr[ultimosMensajesTcr.length-1].getElementsByTagName("span")[0].innerHTML);
+    //console.log(ultimosMensajesTcr[ultimosMensajesTcr.length-1].getElementsByTagName("span")[0].innerHTML);
     direccionUltimaPagina = direccionUltimaPagina.substr(1);
     var numeroUltimaPagina = direccionUltimaPagina.split("-")[0].split("p")[1];
     //console.log("cantidad de temas: " + ultimosMensajes.length);
-    console.log(direccionUltimaPagina);
-    console.log(numeroUltimaPagina);
+    //console.log(direccionUltimaPagina);
+    //console.log(numeroUltimaPagina);
     // ultima pagina
     
     var peticion1 = new XMLHttpRequest();
@@ -72,8 +72,8 @@ function actualizar1(){
                 
                 var url = jQuery(temp.getElementsByClassName("main-head clearfix")[0].innerHTML).text();
                 url = url.split(" ")[2];
-                
-                console.log(url);
+                numeroUltimaPagina = 25*(url-1);
+                console.log(numeroUltimaPagina);
                 
                 if(!(temp.getElementsByClassName("message").length > 0)){
                     for (var x = 0; x<lista.length;x++){
