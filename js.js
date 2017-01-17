@@ -61,14 +61,17 @@ function actualizar1(){
         if (peticion1.readyState==4){
             if(peticion1.status==200){
             // parsear mijo
-                var url = document.URL;
                 
-                console.log(url);
+               
+                
                 var temp = document.createElement("temp");
                 temp.innerHTML = this.responseText;
                 var lista = temp.getElementsByClassName("entry-content");
                 var listaNombres = temp.getElementsByClassName("username");
                 var listaFechas = temp.getElementsByClassName("posthead");
+                
+                var url = temp.getElementsByClassName("main-head clearfix")[0].innerHTML;
+                console.log(url);
                 
                 if(!(temp.getElementsByClassName("message").length > 0)){
                     for (var x = 0; x<lista.length;x++){
