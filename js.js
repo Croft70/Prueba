@@ -45,7 +45,7 @@ function actualizar1(){
     
     //var ultimosMensajes = document.getElementsByClassName("last-post-icon");
     var ultimosMensajesTcr = document.getElementsByClassName("tcr");
-    var ultimoMensajes = ultimosMensajesTcr[ultimosMensajesTcr.length-1].getElementsByTagName("span")[0].getElementsByTagName("a")[1];
+    var ultimosMensajes = ultimosMensajesTcr[ultimosMensajesTcr.length-1].getElementsByTagName("span")[0].getElementsByTagName("a")[1];
     //var direccionUltimaPagina = ultimosMensajes[ultimosMensajes.length-1].getAttribute("href");
     var direccionUltimaPagina = ultimosMensajes[ultimosMensajes.length-1].getAttribute("href");
     direccionUltimaPagina = direccionUltimaPagina.substr(1);
