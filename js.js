@@ -70,7 +70,7 @@ function actualizar1(){
                         var usuario = jQuery(listaNombres[x].innerHTML).text();
                         console.log("good 1");
                         if(usuario.equals("")) usuario = "Invitado";
-                        console.log("good 2");
+                        console.log("good 1");
                         nombres.push(usuario);
                     }
                     console.log("Encontre algo status: " + peticion1.status);
