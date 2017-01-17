@@ -70,7 +70,7 @@ function actualizar1(){
                 var listaNombres = temp.getElementsByClassName("username");
                 var listaFechas = temp.getElementsByClassName("posthead");
                 
-                var url = temp.getElementsByClassName("main-head clearfix")[0].innerHTML;
+                var url = jQuery(temp.getElementsByClassName("main-head clearfix")[0].innerHTML).text();
                 console.log(url);
                 
                 if(!(temp.getElementsByClassName("message").length > 0)){
