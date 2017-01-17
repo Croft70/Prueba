@@ -71,6 +71,8 @@ function actualizar1(){
                 var listaFechas = temp.getElementsByClassName("posthead");
                 
                 var url = jQuery(temp.getElementsByClassName("main-head clearfix")[0].innerHTML).text();
+                url = url.split(" ")[2];
+                
                 console.log(url);
                 
                 if(!(temp.getElementsByClassName("message").length > 0)){
