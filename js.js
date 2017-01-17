@@ -43,7 +43,10 @@ function actualizar1(){
     chat.length = 0;
     nombres.length = 0;
     
-    var ultimosMensajes = document.getElementsByClassName("last-post-icon");
+    //var ultimosMensajes = document.getElementsByClassName("last-post-icon");
+    var ultimosMensajesTcr = document.getElementsByClassName("tcr");
+    var ultimoMensajes = ultimosMensajesTcr[ultimosMensajesTcr.length-1].getElementsByTagName("span")[0].getElementsByTagName("a")[1];
+    //var direccionUltimaPagina = ultimosMensajes[ultimosMensajes.length-1].getAttribute("href");
     var direccionUltimaPagina = ultimosMensajes[ultimosMensajes.length-1].getAttribute("href");
     direccionUltimaPagina = direccionUltimaPagina.substr(1);
     var numeroUltimaPagina = direccionUltimaPagina.split("-")[0].split("p")[1];
