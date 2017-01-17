@@ -61,6 +61,9 @@ function actualizar1(){
         if (peticion1.readyState==4){
             if(peticion1.status==200){
             // parsear mijo
+                var url = document.URL;
+                
+                console.log(url);
                 var temp = document.createElement("temp");
                 temp.innerHTML = this.responseText;
                 var lista = temp.getElementsByClassName("entry-content");
@@ -96,7 +99,9 @@ function actualizar1(){
             }
         }
     }
-    peticion1.open("GET","t31p"+numeroUltimaPagina+"-tagboard-ignorar",true);
+    //peticion1.open("GET","t31p"+numeroUltimaPagina+"-tagboard-ignorar",true);
+    peticion1.open("GET","t31p-tagboard-ignorar?view=newest",true);
+    window.location.href 
     peticion1.send();
     
     
