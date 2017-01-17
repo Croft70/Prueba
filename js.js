@@ -48,9 +48,10 @@ function actualizar1(){
     var ultimosMensajes = ultimosMensajesTcr[ultimosMensajesTcr.length-1].getElementsByTagName("span")[0].getElementsByTagName("a")[1];
     //var direccionUltimaPagina = ultimosMensajes[ultimosMensajes.length-1].getAttribute("href");
     var direccionUltimaPagina = ultimosMensajes.getAttribute("href");
+    console.log(direccionUltimaPagina);
     direccionUltimaPagina = direccionUltimaPagina.substr(1);
     var numeroUltimaPagina = direccionUltimaPagina.split("-")[0].split("p")[1];
-    console.log("cantidad de temas: " + ultimosMensajes.length);
+    //console.log("cantidad de temas: " + ultimosMensajes.length);
     console.log(direccionUltimaPagina);
     console.log(numeroUltimaPagina);
     // ultima pagina
