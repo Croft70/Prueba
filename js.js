@@ -39,7 +39,7 @@ function actualizar2(){
     nombres.length = 0;
     peticionHTML(0);
 }
-function actualizar1(){
+function actualizarViejo(){
     chat.length = 0;
     nombres.length = 0;
     
@@ -112,7 +112,12 @@ function actualizar1(){
     
     
 }
-
+function actualizar1(){
+ 
+    var div = document.getElementById("a");
+    document.getElementById("a").innerHTML = " INICIA SESION PARA USAR EL TAG  ";
+    
+}
 function segundaPeticion(numero){
     var peticion1 = new XMLHttpRequest();
     peticion1.onreadystatechange = function(){
