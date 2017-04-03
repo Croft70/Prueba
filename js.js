@@ -34,12 +34,12 @@ function actualizar(){
        document.getElementById("texto").style.backgroundColor = "#ccffcc";
     }
 }       
-function actualizar2(){
+function actualizarViejo(){
     chat.length = 0;
     nombres.length = 0;
     peticionHTML(0);
 }
-function actualizarViejo(){
+function actualizar1(){
     chat.length = 0;
     nombres.length = 0;
     
@@ -112,7 +112,7 @@ function actualizarViejo(){
     
     
 }
-function actualizar1(){
+function actualizar2(){
  
     var div = document.getElementById("a");
     document.getElementById("a").innerHTML = " INICIA SESION PARA USAR EL TAG  ";
