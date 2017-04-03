@@ -115,7 +115,7 @@ function actualizar1(){
 function actualizar2(){
  
     var div = document.getElementById("a");
-    document.getElementById("a").innerHTML = " INICIA SESION PARA USAR EL TAG  ";
+    document.getElementById("a").innerHTML = ' <div style="font-size: 2em; text-align: center;color:white">INICIA SESION PARA USAR EL TAG</div>  ';
     
 }
 function segundaPeticion(numero){
